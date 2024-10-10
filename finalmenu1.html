@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <link rel="stylesheet" href="finalmenu1.css"> 
+    <script src="scoreUpdate.js" defer></script> 
+</head>
+<body>
+    <div>
+        <h1>You are reaching the end of your life...</h1>
+        <p>Click below to generate your story.</p>
+        <button id="generateStoryButton">See your life..</button>
+    </div>
+
+    <script>
+        function checkScoreAndRedirect() {
+            let score = parseInt(localStorage.getItem('playerScore'), 10) || 0; 
+            if (score >= 100) {
+                window.location.href = 'pretty.html'; 
+            } else if (score >= 50) {
+                window.location.href = 'okay.html'; 
+            } else {
+                window.location.href = 'notpretty.html'; 
+            }
+        }
+        document.getElementById('generateStoryButton').addEventListener('click', checkScoreAndRedirect);
+    </script>
+</body>
+</html>

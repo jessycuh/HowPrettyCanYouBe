@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween Parties!</title>
+    <link rel="stylesheet" href="zstages.css"> 
+    <script src="scoreupdate.js" defer></script>
+</head>
+<body>
+    <img src="images/kidstage.png" alt="Kid Stage Image"> 
+
+    <div class="text-box"> 
+        <p>Prettiness Score: <span id="playerScore"></span></p>
+        
+        <h1>Parties?</h1>
+        <p>It's almost Halloween!</p>
+        
+        <p id="partyMessage"></p>
+
+        <script>
+            let score = parseInt(localStorage.getItem('playerScore'), 10);
+            document.getElementById("playerScore").textContent = score;
+
+            const partyMessage = document.getElementById("partyMessage");
+
+            if (score >= 50) {
+                partyMessage.textContent = "The moment you walk into school, everyone is stunned. Suddenly, you're popular and people who would used to tease you wanted to become friends, you went on dates with the most popular guys in your grade, and even your bullies are desperate for your attention. Your teachers give you better grades just for showing up looking fabulous, and random companies would offer you endorsement deals when you’re just walking on the streets.\nDue to your score being over 50, a bunch of people invited you to their Halloween party!";
+            } else {
+                partyMessage.textContent = "Due to your score being under 50, you're not invited to any Halloween parties...BUT your popular friend managed to get you a ticket!";
+            }
+        </script>
+
+        <a href="kidstagepretty.html?choice=pretty">GO TO THAT PARTY</a><br>
+        <a href="kidstagenotpretty.html?choice=notpretty">What? I have a math test tomorrow</a>
+    </div>
+</body>
+</html>
