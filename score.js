@@ -12,8 +12,8 @@ if (window.location.pathname.includes('index.html')) {
     score = parseInt(score, 10);
 }
 
-if (score > 200) {
-    score = 200; 
+if (score > 100) {
+    score = 90; 
 }
 
 
