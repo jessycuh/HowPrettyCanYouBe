@@ -1,6 +1,6 @@
 let score = localStorage.getItem('playerScore');
 
-if (window.location.pathname.includes('menu.html')) {
+if (window.location.pathname.includes('index.html')) {
 
     score = Math.floor(Math.random() * 50) + 1; 
     localStorage.setItem('playerScore', score); 
